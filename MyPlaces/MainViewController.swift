@@ -10,7 +10,7 @@ import UIKit
 class MainViewController: UITableViewController {
     
     let restaurantNames = [
-        "Burger Heroes", "Kitchen", "Bonsai", "Дастартахан",
+        "Burger Heroes", "Kitchen", "Bonsai", "Дастархан",
         "Индокитай", "X.O", "Балкан Гриль", "Sherlock Holmes",
         "Speak Easy", "Morris Pub", "Вкусные истории",
         "Классик", "Love&Life", "Шок", "Бочка"
@@ -32,6 +32,7 @@ class MainViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         cell.textLabel?.text = restaurantNames[indexPath.row]
+        cell.imageView?.image = UIImage(named: restaurantNames[indexPath.row])
 
         return cell
     }
