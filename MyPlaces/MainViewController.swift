@@ -15,7 +15,7 @@ class MainViewController: UITableViewController {
         super.viewDidLoad()
 
     }
-
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,5 +47,7 @@ class MainViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func cancelAction(_ segue: UIStoryboardSegue) { }
 
 }
