@@ -13,6 +13,4 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var imageOfPlace: UIImageView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
-    
-
 }
