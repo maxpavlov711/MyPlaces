@@ -266,10 +266,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="pT3-Ys-T0Z" secondAttribute="bottom" id="7nO-h4-a8b"/>
+                            <constraint firstItem="OSb-dx-24V" firstAttribute="top" secondItem="FPE-7W-jqm" secondAttribute="top" id="AJh-kV-Ueo"/>
                             <constraint firstItem="OSb-dx-24V" firstAttribute="trailing" secondItem="FPE-7W-jqm" secondAttribute="trailing" id="MsI-MZ-uDN"/>
                             <constraint firstItem="pT3-Ys-T0Z" firstAttribute="top" secondItem="OSb-dx-24V" secondAttribute="bottom" constant="1" id="bNT-Iv-c6z"/>
                             <constraint firstItem="pT3-Ys-T0Z" firstAttribute="trailing" secondItem="FPE-7W-jqm" secondAttribute="trailing" id="hzJ-cO-HKY"/>
-                            <constraint firstItem="OSb-dx-24V" firstAttribute="top" secondItem="FPE-7W-jqm" secondAttribute="top" id="spU-ui-Hag"/>
                             <constraint firstItem="pT3-Ys-T0Z" firstAttribute="leading" secondItem="FPE-7W-jqm" secondAttribute="leading" id="sqG-e2-bPf"/>
                             <constraint firstItem="OSb-dx-24V" firstAttribute="leading" secondItem="FPE-7W-jqm" secondAttribute="leading" id="tUh-EN-Qmr"/>
                         </constraints>
