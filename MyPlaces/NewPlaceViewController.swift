@@ -129,7 +129,7 @@ extension NewPlaceViewController: UITextFieldDelegate {
     //    Скрытие клавиатуры по нажатию на done
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return true
+        return true 
     }
     
     @objc private func textFieldChanged() {
