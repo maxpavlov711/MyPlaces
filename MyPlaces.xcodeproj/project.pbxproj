@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		58C95F7DA363DD553326B634 /* Pods_MyPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3110F18DBACF3241CAE678 /* Pods_MyPlaces.framework */; };
+		5A81BC7727AABC5C00086E6B /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81BC7627AABC5C00086E6B /* RatingControl.swift */; };
 		5AB1EE0527A693BA009E15E8 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB1EE0427A693BA009E15E8 /* NewPlaceViewController.swift */; };
 		5AB1EE0727A6D284009E15E8 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB1EE0627A6D284009E15E8 /* StorageManager.swift */; };
 		5ABEB31E27A2CA04006AFFDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABEB31D27A2CA04006AFFDE /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		144B931B287ADEC3C16E14BC /* Pods-MyPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.release.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.release.xcconfig"; sourceTree = "<group>"; };
 		3813954ED8B05C8E2CE81C4A /* Pods-MyPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.debug.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.debug.xcconfig"; sourceTree = "<group>"; };
+		5A81BC7627AABC5C00086E6B /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		5AB1EE0427A693BA009E15E8 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
 		5AB1EE0627A6D284009E15E8 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		5ABEB31A27A2CA04006AFFDE /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,7 @@
 				5ABEB33127A2CD94006AFFDE /* MainViewController.swift */,
 				5ABEB35927A53184006AFFDE /* CustomTableViewCell.swift */,
 				5AB1EE0427A693BA009E15E8 /* NewPlaceViewController.swift */,
+				5A81BC7627AABC5C00086E6B /* RatingControl.swift */,
 				5ABEB35B27A54569006AFFDE /* PlaceModel.swift */,
 				5ABEB32327A2CA04006AFFDE /* Main.storyboard */,
 				5ABEB32627A2CA05006AFFDE /* Assets.xcassets */,
@@ -222,6 +225,7 @@
 				5AB1EE0527A693BA009E15E8 /* NewPlaceViewController.swift in Sources */,
 				5ABEB31E27A2CA04006AFFDE /* AppDelegate.swift in Sources */,
 				5AB1EE0727A6D284009E15E8 /* StorageManager.swift in Sources */,
+				5A81BC7727AABC5C00086E6B /* RatingControl.swift in Sources */,
 				5ABEB35C27A54569006AFFDE /* PlaceModel.swift in Sources */,
 				5ABEB35A27A53184006AFFDE /* CustomTableViewCell.swift in Sources */,
 				5ABEB32027A2CA04006AFFDE /* SceneDelegate.swift in Sources */,
