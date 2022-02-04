@@ -228,7 +228,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="3bO-9k-etN">
-                                                    <rect key="frame" x="96" y="8" width="302" height="69"/>
+                                                    <rect key="frame" x="96" y="8" width="212" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mME-7K-xgN">
                                                             <rect key="frame" x="0.0" y="0.0" width="44" height="24.5"/>
@@ -250,12 +250,29 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="103" placeholderIntrinsicHeight="25" translatesAutoresizingMaskIntoConstraints="NO" id="6x7-w4-07f" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="316" y="35.5" width="90" height="14"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="6oh-DO-H2Z"/>
+                                                        <constraint firstAttribute="height" constant="14" id="NJf-xg-q6r"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="emptyStar"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filledStar"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="6x7-w4-07f" secondAttribute="trailing" constant="8" id="Cdj-WC-3u0"/>
                                                 <constraint firstItem="G4W-L9-O2Q" firstAttribute="leading" secondItem="ZYV-TR-S2a" secondAttribute="leading" constant="15" id="CxN-aE-dja"/>
                                                 <constraint firstItem="3bO-9k-etN" firstAttribute="leading" secondItem="G4W-L9-O2Q" secondAttribute="trailing" constant="16" id="KEv-f7-Kw1"/>
                                                 <constraint firstAttribute="bottom" secondItem="3bO-9k-etN" secondAttribute="bottom" constant="8" id="QNF-KA-vRI"/>
-                                                <constraint firstAttribute="trailing" secondItem="3bO-9k-etN" secondAttribute="trailing" constant="16" id="hPn-Z2-UkT"/>
+                                                <constraint firstItem="6x7-w4-07f" firstAttribute="centerY" secondItem="ZYV-TR-S2a" secondAttribute="centerY" id="Rrj-XS-xFQ"/>
+                                                <constraint firstItem="6x7-w4-07f" firstAttribute="leading" secondItem="3bO-9k-etN" secondAttribute="trailing" constant="8" id="ghH-5v-Hui"/>
                                                 <constraint firstItem="3bO-9k-etN" firstAttribute="top" secondItem="ZYV-TR-S2a" secondAttribute="top" constant="8" id="v70-B6-VX2"/>
                                                 <constraint firstItem="G4W-L9-O2Q" firstAttribute="centerY" secondItem="ZYV-TR-S2a" secondAttribute="centerY" id="xr9-Mi-mqK"/>
                                             </constraints>
@@ -264,6 +281,7 @@
                                             <outlet property="imageOfPlace" destination="G4W-L9-O2Q" id="9Nq-O3-AAU"/>
                                             <outlet property="locationLabel" destination="CFT-l6-ZRX" id="h8Z-Kg-0c0"/>
                                             <outlet property="nameLabel" destination="mME-7K-xgN" id="4zV-ng-ggu"/>
+                                            <outlet property="ratingControl" destination="6x7-w4-07f" id="uOq-L2-GWi"/>
                                             <outlet property="typeLabel" destination="lfj-Sv-3qY" id="O4v-ok-bsy"/>
                                             <segue destination="EQc-tK-96n" kind="show" identifier="showDetail" id="pup-ua-jnF"/>
                                         </connections>
@@ -368,6 +386,8 @@
     <resources>
         <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="195" height="196"/>
+        <image name="emptyStar" width="255" height="256"/>
+        <image name="filledStar" width="237.5" height="238"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

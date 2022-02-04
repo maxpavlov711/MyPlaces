@@ -39,6 +39,7 @@ import UIKit
         super.init(coder: coder)
         setupButtons()
     }
+    
     //    MARK: - Button Action
     @objc func ratingButtonTapped(button: UIButton) {
         guard let index = ratingButtons.firstIndex(of: button) else { return }

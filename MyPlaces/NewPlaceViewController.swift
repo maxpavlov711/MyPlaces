@@ -126,8 +126,6 @@ class NewPlaceViewController: UITableViewController {
     @IBAction func cancelAction(_ sender: Any) {
         dismiss(animated: true)
     }
-    
-
 }
 
 // MARK: - Text field delegate
