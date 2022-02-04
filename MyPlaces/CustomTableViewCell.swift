@@ -27,7 +27,4 @@ class CustomTableViewCell: UITableViewCell {
             ratingControl.settings.updateOnTouch = false
         }
     }
-    
-    
-    
 }
