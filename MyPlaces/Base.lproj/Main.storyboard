@@ -258,6 +258,9 @@
                             <constraint firstAttribute="bottom" secondItem="0g2-eH-lik" secondAttribute="bottom" id="oKo-iy-Xuy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="0g2-eH-lik" id="haf-7w-o4m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eM-Om-gh5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -438,12 +441,15 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="6x7-w4-07f">
+            <size key="intrinsicContentSize" width="103" height="25"/>
+        </designable>
         <designable name="nuk-eD-jJe">
             <size key="intrinsicContentSize" width="252" height="44"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="Td1-lK-ka5"/>
+        <segue reference="pup-ua-jnF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AZ" width="25" height="24"/>
