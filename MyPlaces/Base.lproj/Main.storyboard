@@ -246,6 +246,18 @@
                                     <action selector="closeVC" destination="Ger-cR-Uaq" eventType="touchUpInside" id="X4a-be-pJ7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaT-73-Ar6">
+                                <rect key="frame" x="324" y="772" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NVU-To-cLt"/>
+                                    <constraint firstAttribute="width" constant="50" id="a0A-RO-PDC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="GetDirection"/>
+                                <connections>
+                                    <action selector="centerViewInUserLocation" destination="Ger-cR-Uaq" eventType="touchUpInside" id="Q8l-lP-Gxf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1rl-nz-pW7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -255,6 +267,8 @@
                             <constraint firstItem="0g2-eH-lik" firstAttribute="top" secondItem="oki-YR-OPm" secondAttribute="top" id="48a-NU-NDd"/>
                             <constraint firstItem="0g2-eH-lik" firstAttribute="trailing" secondItem="1rl-nz-pW7" secondAttribute="trailing" id="Iib-5G-Cqb"/>
                             <constraint firstItem="MLD-7p-isA" firstAttribute="top" secondItem="1rl-nz-pW7" secondAttribute="top" constant="40" id="J69-Zg-ykp"/>
+                            <constraint firstItem="1rl-nz-pW7" firstAttribute="trailing" secondItem="uaT-73-Ar6" secondAttribute="trailing" constant="40" id="es0-vV-ZwJ"/>
+                            <constraint firstItem="1rl-nz-pW7" firstAttribute="bottom" secondItem="uaT-73-Ar6" secondAttribute="bottom" constant="40" id="jXL-3g-yLG"/>
                             <constraint firstAttribute="bottom" secondItem="0g2-eH-lik" secondAttribute="bottom" id="oKo-iy-Xuy"/>
                         </constraints>
                     </view>
@@ -453,6 +467,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="GetDirection" width="50" height="50"/>
         <image name="Photo" width="195" height="196"/>
         <image name="emptyStar" width="255" height="256"/>
         <image name="filledStar" width="237.5" height="238"/>
