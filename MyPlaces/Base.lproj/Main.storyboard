@@ -126,7 +126,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="Placeholder"/>
                                                     <connections>
-                                                        <segue destination="Ger-cR-Uaq" kind="presentation" identifier="getAdress" modalPresentationStyle="fullScreen" id="RC6-Yd-yIq"/>
+                                                        <segue destination="Ger-cR-Uaq" kind="presentation" identifier="getAddress" modalPresentationStyle="fullScreen" id="RC6-Yd-yIq"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -319,7 +319,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="adressLabel" destination="PyG-Tt-8ZJ" id="naZ-cX-xWK"/>
+                        <outlet property="addressLabel" destination="PyG-Tt-8ZJ" id="naZ-cX-xWK"/>
                         <outlet property="doneButton" destination="2BZ-aW-epd" id="YPl-c5-wGU"/>
                         <outlet property="mapPinImage" destination="pPL-LJ-n2C" id="O2t-ij-zw7"/>
                         <outlet property="mapView" destination="0g2-eH-lik" id="haf-7w-o4m"/>
