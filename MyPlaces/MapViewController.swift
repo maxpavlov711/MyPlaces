@@ -24,6 +24,8 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        adressLabel.text = ""
         mapView.delegate = self
         setupMapView()
         checkLocationServices()
@@ -50,7 +52,6 @@ class MapViewController: UIViewController {
             doneButton.isHidden = true
         }
     }
-    
     
     private func setupPlaceMark() {
         guard let location = place.location else { return }
@@ -133,6 +134,14 @@ class MapViewController: UIViewController {
         }
     }
     
+    private func getCenterLocation(for mapView: MKMapView) -> CLLocation {
+        
+        let latitude = mapView.centerCoordinate.latitude
+        let longitude = mapView.centerCoordinate.longitude
+        
+        return CLLocation(latitude: latitude, longitude: longitude)
+    }
+    
     private func showAlert(title: String, massage: String) {
         
         let alert = UIAlertController(title: title, message: massage, preferredStyle: .alert)
@@ -165,6 +174,36 @@ extension MapViewController: MKMapViewDelegate {
         }
         
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        
+        let center = getCenterLocation(for: mapView)
+        let geocader = CLGeocoder()
+        
+        geocader.reverseGeocodeLocation(center) { placemarks, error in
+            
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            guard let placemarks = placemarks else { return }
+            
+            let placemark = placemarks.first
+            let streetName = placemark?.thoroughfare
+            let buildNumber = placemark?.subThoroughfare
+            
+            DispatchQueue.main.async {
+                if streetName != nil && buildNumber != nil {
+                    self.adressLabel.text = "\(streetName!), \(buildNumber!)"
+                } else if streetName != nil {
+                    self.adressLabel.text = "\(streetName!)"
+                } else {
+                    self.adressLabel.text = ""
+                }
+            }
+        }
     }
 }
 
