@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -286,15 +287,31 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaT-73-Ar6">
-                                <rect key="frame" x="339" y="682" width="30" height="30"/>
+                                <rect key="frame" x="329" y="672" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="NVU-To-cLt"/>
-                                    <constraint firstAttribute="width" constant="30" id="a0A-RO-PDC"/>
+                                    <constraint firstAttribute="height" constant="40" id="NVU-To-cLt"/>
+                                    <constraint firstAttribute="width" constant="40" id="a0A-RO-PDC"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <imageReference key="image" image="location.circle.fill" catalog="system" renderingMode="template"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="centerViewInUserLocation" destination="Ger-cR-Uaq" eventType="touchUpInside" id="Q8l-lP-Gxf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POS-QS-IVK">
+                                <rect key="frame" x="182" y="767" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5nS-Nw-0xe"/>
+                                    <constraint firstAttribute="width" constant="50" id="agc-5M-LQ9"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="GetDirection"/>
                                 <connections>
-                                    <action selector="centerViewInUserLocation" destination="Ger-cR-Uaq" eventType="touchUpInside" id="Q8l-lP-Gxf"/>
+                                    <action selector="goButtonPressed" destination="Ger-cR-Uaq" eventType="touchUpInside" id="P6s-mV-MaR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -306,12 +323,14 @@
                             <constraint firstItem="0g2-eH-lik" firstAttribute="leading" secondItem="1rl-nz-pW7" secondAttribute="leading" id="1Tp-Mf-KMa"/>
                             <constraint firstItem="0g2-eH-lik" firstAttribute="top" secondItem="oki-YR-OPm" secondAttribute="top" id="48a-NU-NDd"/>
                             <constraint firstItem="1rl-nz-pW7" firstAttribute="trailing" secondItem="uaT-73-Ar6" secondAttribute="trailing" constant="45" id="BkZ-ct-e0M"/>
+                            <constraint firstItem="1rl-nz-pW7" firstAttribute="bottom" secondItem="POS-QS-IVK" secondAttribute="bottom" constant="45" id="Gqz-Z0-dFa"/>
                             <constraint firstItem="1rl-nz-pW7" firstAttribute="bottom" secondItem="2BZ-aW-epd" secondAttribute="bottom" constant="40" id="IGg-uo-DyV"/>
                             <constraint firstItem="0g2-eH-lik" firstAttribute="trailing" secondItem="1rl-nz-pW7" secondAttribute="trailing" id="Iib-5G-Cqb"/>
                             <constraint firstItem="MLD-7p-isA" firstAttribute="top" secondItem="1rl-nz-pW7" secondAttribute="top" constant="40" id="J69-Zg-ykp"/>
                             <constraint firstItem="pPL-LJ-n2C" firstAttribute="centerX" secondItem="oki-YR-OPm" secondAttribute="centerX" id="Tj3-wG-o8S"/>
                             <constraint firstItem="pPL-LJ-n2C" firstAttribute="centerY" secondItem="oki-YR-OPm" secondAttribute="centerY" constant="-20" id="Vrm-v7-bap"/>
                             <constraint firstItem="2BZ-aW-epd" firstAttribute="centerX" secondItem="oki-YR-OPm" secondAttribute="centerX" id="XxZ-DE-Rb3"/>
+                            <constraint firstItem="POS-QS-IVK" firstAttribute="centerX" secondItem="oki-YR-OPm" secondAttribute="centerX" id="hey-yw-RvY"/>
                             <constraint firstAttribute="bottom" secondItem="0g2-eH-lik" secondAttribute="bottom" id="oKo-iy-Xuy"/>
                             <constraint firstItem="1rl-nz-pW7" firstAttribute="bottom" secondItem="uaT-73-Ar6" secondAttribute="bottom" constant="150" id="vyM-Z3-38l"/>
                             <constraint firstItem="1rl-nz-pW7" firstAttribute="trailing" secondItem="PyG-Tt-8ZJ" secondAttribute="trailing" constant="20" id="wJk-Mh-ISL"/>
@@ -321,6 +340,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="PyG-Tt-8ZJ" id="naZ-cX-xWK"/>
                         <outlet property="doneButton" destination="2BZ-aW-epd" id="YPl-c5-wGU"/>
+                        <outlet property="goButton" destination="POS-QS-IVK" id="eZG-e2-MCk"/>
                         <outlet property="mapPinImage" destination="pPL-LJ-n2C" id="O2t-ij-zw7"/>
                         <outlet property="mapView" destination="0g2-eH-lik" id="haf-7w-o4m"/>
                     </connections>
@@ -523,6 +543,7 @@
         <image name="Placeholder" width="22" height="22"/>
         <image name="emptyStar" width="255" height="256"/>
         <image name="filledStar" width="237.5" height="238"/>
+        <image name="location.circle.fill" catalog="system" width="128" height="121"/>
         <image name="map" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
